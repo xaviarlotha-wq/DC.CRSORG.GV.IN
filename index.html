@@ -3,70 +3,79 @@
 <head>
 <meta charset="UTF-8">
 <title>Validate Certificate | Civil Registration</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-html, body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Background */
 body {
-    background-image: url("2.png");
-    background-size: cover;
-    background-position: center;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("2.PNG");
 }
 
-/* Header */
-.header img {
-    width: 100%;
-    max-width: 900px;
-    display: block;
-    margin: 20px auto;
-    box-shadow: 0 0 30px rgba(0,0,0,1);
+/* Header 
+.header {
+    background: linear-gradient(to right, #ff9933, #ffffff, #138808);
+    padding: 12px 20px;
+    border-bottom: 2px solid #ddd;
+    text-align: center;
+}
+*/
+.header h1 {
+    margin: 0;
+    font-size: 22px;
+    color: #000;
 }
 
 /* Main Container */
 .container {
-    max-width: 600px;
-    margin: 30px auto;
+    max-width:500px;
+    margin: 50px auto;
     background: #fff;
-    padding: 20px;
+    padding: 25px;
     box-shadow: 0 0 30px rgba(0,0,0,1);
-}
+} 
 
 /* Table */
 .data-table {
-    width: 100%;
+    width: 80%;      /* change 70% to any value */
+    margin: auto;    /* center table */
     border-collapse: collapse;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .data-table td {
     border: 1px solid #cfd8dc;
-    padding: 10px;
+    padding: 15px;
+	width: 100%
 }
 
 .data-table td:first-child {
-    width: 40%;
-    font-weight: bold;
-    background: #f5f7f9;
+    
+   width: 500px
+   /* font-weight: bold;*/
 }
 
+/* Footer */
+.footer {
+    background: #0b4f6c;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 40px;
+}
+/* Fotter Css */
 /* Government Footer */
-.gov-footer {
+.gov-footer{
     background: linear-gradient(to bottom, #1e6f8f, #0b4f6c);
     color: #ffffff;
     padding: 30px 15px;
     text-align: center;
     font-size: 13px;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 /* Footer Logos */
-.footer-logos {
+.gov-footer .footer-logos{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -74,7 +83,7 @@ body {
     margin-bottom: 18px;
 }
 
-.footer-logos img {
+.gov-footer .footer-logos img{
     height: 42px;
     background: #ffffff;
     padding: 5px 8px;
@@ -82,34 +91,32 @@ body {
 }
 
 /* Footer Links */
-.footer-links {
+.gov-footer .footer-links{
     margin: 10px 0;
 }
 
-.footer-links a {
+.gov-footer .footer-links a{
     color: #ffffff;
     text-decoration: none;
     margin: 0 6px;
     white-space: nowrap;
 }
 
-.footer-links a:hover {
+.gov-footer .footer-links a:hover{
     text-decoration: underline;
 }
 
 /* Footer Text */
-.footer-text {
+.gov-footer .footer-text{
     margin-top: 12px;
     line-height: 1.6;
 }
 
-.footer-copy {
+.gov-footer .footer-copy{
     margin-top: 8px;
     font-size: 12px;
     opacity: 0.9;
-}
-
-/* 🔥 MOBILE VIEW FIX */
+}/* 🔥 MOBILE VIEW FIX */
 @media (max-width: 600px) {
     .container {
         margin: 15px;
@@ -138,12 +145,12 @@ body {
         display: inline-block;
         margin: 4px;
     }
-}
-</style>
 
+</style>
 <script>
 function updateDateTime() {
     const now = new Date();
+
     const options = {
         day: '2-digit',
         month: '2-digit',
@@ -153,9 +160,11 @@ function updateDateTime() {
         second: '2-digit',
         hour12: true
     };
+
     document.getElementById("liveDateTime").innerText =
         now.toLocaleString('en-IN', options);
 }
+
 updateDateTime();
 setInterval(updateDateTime, 1000);
 </script>
@@ -165,57 +174,100 @@ setInterval(updateDateTime, 1000);
 <body>
 
 <div class="header">
-    <img src="1.jpeg" alt="Header">
+    <h1><img src="1.jpeg" width="110%" height="15%"  style="display:block;box-shadow: 0 0 30px rgba(0,0,0,1);"></h1>
 </div>
 
 <div class="container">
-<table class="data-table">
-<tr><td>Registration Number</td><td>5328</td></tr>
-<tr><td>Name</td><td>MUSTAFA SAIYADBHAI HAMDANI</td></tr>
-<tr><td>Gender</td><td>Male</td></tr>
-<tr><td>Date of Birth</td><td>14-11-2006</td></tr>
-<tr><td>Name of Mother</td><td>HUMERABEN SAIYADBHAI HAMDANI</td></tr>
-<tr><td>Name of Father</td><td>SAIYADBHAI HASANBHAI HAMDANI / હાંડની</td></tr>
-<tr><td>Place of Birth</td><td>SADBHAVNA HOSPITAL, MAHUVA, GUJARAT</td></tr>
-<tr><td>Registration Date</td><td>24-11-2006</td></tr>
-<tr><td>Registration Unit Name</td><td>Mahuva Municipality</td></tr>
-<tr><td>Registration Unit Code</td><td>90256</td></tr>
-</table>
-</div>
 
+
+
+<table class="data-table">
+<tr>
+    <td>Registration Number</td>
+    <td>5328</td>
+</tr>
+<tr>
+    <td>Name</td>
+    <td width=100,>MUSTAFA SAIYADBHAI HAMDANI</td>
+</tr>
+<tr>
+    <td>Gender</td>
+    <td>Male</td>
+</tr>
+<tr>
+    <td>Date of Birth</td>
+    <td>14-11-2006</td>
+</tr>
+<tr>
+    <td>Name of Mother</td>
+    <td>HUMERABEN SAIYADBHAI HAMDANI</td>
+</tr>
+<tr>
+    <td>Name of Father</td>
+    <td>SAIYADBHAI HASANBHAI HAMDANI/હાંડની </td>
+</tr>
+<tr>
+    <td>Place of Birth</td>
+    <td>SADBHAVNA HOSPITAL, MAHUVA, GUJARAT</td>
+</tr>
+<tr>
+    <td>Registration Date</td>
+    <td>24-11-2006</td>
+</tr>
+<tr>
+    <td>Registration Unit Name</td>
+    <td>Mahuva Municipality</td>
+</tr>
+<tr>
+    <td>Registration Unit Code</td>
+    <td>90256</td>
+</tr>
+</table>
+
+
+</div>
 <footer class="gov-footer">
 
-<div class="footer-logos">
-    <img src="2020.png" alt="Logo">
-</div>
+    <!-- Logos -->
+    <div class="footcer-logos">
+        <img src=2020.png alt="Data Gov">
+        
+    </div>
 
-<div class="footer-links">
-    <a href="#">Website Policy</a> |
-    <a href="#">Mobile App Privacy Policy</a> |
-    <a href="#">Terms & Conditions</a> |
-    <a href="#">Accessibility Statement</a> |
-    <a href="#">Web Information Manager</a>
-</div>
+    <!-- First Links Row -->
+    <div class="footer-links">
+        <a href="#">Website Policy</a> |
+        <a href="#">Mobile App Privacy Policy</a> |
+        <a href="#">Terms & Conditions</a> |
+        <a href="#">Accessibility Statement</a> |
+        <a href="#">Web Information Manager</a>
+    </div>
 
-<div class="footer-links">
-    <a href="#">Feedback</a> |
-    <a href="#">Sitemap</a> |
-    <a href="#">Contact Us</a> |
-    <a href="#">Vacancies</a> |
-    <a href="#">Product & Services</a> |
-    <a href="#">Pricing</a> |
-    <a href="#">Cancellation Policy</a> |
-    <a href="#">Grievance Management Policy</a>
-</div>
+    <!-- Second Links Row -->
+    <div class="footer-links">
+        <a href="#">Feedback</a> |
+        <a href="#">Sitemap</a> |
+        <a href="#">Contact Us</a> |
+        <a href="#">Vacancies</a> |
+        <a href="#">Product & Services</a> |
+        <a href="#">Pricing</a> |
+        <a href="#">Cancellation Policy</a> |
+        <a href="#">Grievance Management Policy</a>
+    </div>
 
-<div class="footer-text">
+    <!-- Footer Text -->
+    <div class="footer-text">
+       <div class="footer-text">
     Last Updated: <span id="liveDateTime"></span><br>
     Website Developed & Maintained by Office of the Registrar General & Census Commissioner, India
 </div>
+<br>
+        Website Developed & Maintained by Office of the Registrar General & Census Commissioner, India
+    </div>
 
-<div class="footer-copy">
-    © 2025 – Demo Registration Portal | For Learning Purpose Only
-</div>
+    <div class="footer-copy">
+        © 2025 – Demo Registration Portal | For Learning Purpose Only
+    </div>
 
 </footer>
 
